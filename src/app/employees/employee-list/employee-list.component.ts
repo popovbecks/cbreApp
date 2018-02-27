@@ -3,7 +3,7 @@ import { EmployeeService } from "../shared/employee.service";
 import { Employee } from "../shared/employee.model";
 import {element} from "protractor";
 import { ToastrService } from "ngx-toastr";
-
+import {SearchPipe} from "../../search.pipe";
 
 
 @Component({
@@ -15,7 +15,6 @@ export class EmployeeListComponent implements OnInit {
 
   employeeList: Employee[];
   searchStr: String = '';
-  isEmpVisible: boolean = false;
   constructor(private employeeService: EmployeeService, private tostr: ToastrService) { }
 
   @Output () isEmployeeListFormChange = new EventEmitter<boolean>();
