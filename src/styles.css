@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+input.ng-invalid.ng-dirty{
+  border: 1px solid red;
+}
+button:hover,a.btn:hover{
+  cursor:pointer;
+}
+.jumbotron{
+  padding:48px 0px 20px 0px;
+  background-color: gainsboro;
+  color: #00684B;
+  font-size:38px;
+}
+.text-center{
+  position: relative;
+
+  padding-top: 5px;
+}
+.logo{
+  position: absolute;
+  left:15px;
+  top:46px;
+}
+.routerButton{
+  padding: 5px 25px;
+  background-color: green;
+  border-radius: 20px;
+  text-decoration: none;
+  color:black;
+}
+.routerButton:hover{
+  border: 2px solid red;
+  text-decoration: none;
+  color:white;
+}

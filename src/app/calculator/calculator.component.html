@@ -1,0 +1,67 @@
+<div class="text-center">
+  <a routerLink="/" class="routerButton">CBRE Data Base</a>
+  <div class="logo">
+    <img src="https://popovbecks.github.io/Angular5CRUDproject/assets/logo.png" alt="">
+  </div>
+  <h2 class="jumbotron"></h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="form-group">
+        <label>Стоимость за час</label>
+        <input class="form-control" [(ngModel)]="salaryByHour" type="number">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="text-center">
+        <div class="form-group">
+          <label>Всего часов в мес.</label>
+          <input class="form-control" [(ngModel)]="hours" type="number">
+        </div>
+        <div class="form-group">
+          <label>Ночные часы</label>
+          <input class="form-control" [(ngModel)]="nights" type="number">
+        </div>
+        <div class="form-group">
+          <label>Праздничные/подр. часы</label>
+          <input class="form-control" [(ngModel)]="holidaysDays" type="number">
+        </div>
+        <div class="form-group">
+          <label>Всего смен в мес.</label>
+          <input class="form-control" [(ngModel)]="workDays" type="number">
+        </div>
+        <button (click)="calc()">Рассчитать</button>
+        <button (click)="resetForm()">Сбросить</button>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Почас</th>
+          <th scope="col">Прем</th>
+          <th scope="col">Ночн</th>
+          <th scope="col">Питание</th>
+          <th scope="col">Праздн</th>
+          <th scope="col">Итого без налогов</th>
+          <th scope="col">Итого с учетом налогов</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row"></th>
+          <td>{{allSalary}}</td>
+          <td>{{bonus}}</td>
+          <td>{{salaryByNights.toFixed(1)}}</td>
+          <td>{{salaryByFood.toFixed(1)}}</td>
+          <td>{{salaryByHolidays.toFixed(1)}}</td>
+          <td>{{sum.toFixed(1)}}</td>
+          <td>{{sumWithTax.toFixed(1)}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

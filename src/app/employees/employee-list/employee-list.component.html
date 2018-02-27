@@ -1,0 +1,18 @@
+<h6 class="text-center">Список сотрудников</h6>
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Поиск по имени" [(ngModel)]="searchStr">
+</div>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let employee of employeeList | search:searchStr">
+    <td>{{employee.name}}</td>
+    <td>{{employee.position}}</td>
+    <td><a class="btn" (click)="onEdit(employee)">
+
+      <i class="fas fa-pen-square"></i>
+    </a>
+      <a class="btn" (click)="onDelete(employee.$key)">
+
+        <i class="fas fa-trash-alt"></i>
+      </a></td>
+  </tr>
+</table>

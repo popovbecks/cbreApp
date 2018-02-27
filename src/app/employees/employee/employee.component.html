@@ -1,0 +1,45 @@
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)] = "getService().selectEmployee.$key">
+  <div class="form-group">
+  <label>Фамилия Имя Отчество</label>
+  <input class="form-control" name="name" #name="ngModel" [(ngModel)]="getService().selectEmployee.name" placeholder="Введите ФИО" required>
+</div>
+  <div class="form-group">
+    <label>Должность</label>
+    <input class="form-control" name="position" #position="ngModel" [(ngModel)]="getService().selectEmployee.position" placeholder="Введите должность">
+  </div>
+  <div class="form-group">
+    <label>Обьект</label>
+    <input class="form-control" name="office" #office="ngModel" [(ngModel)]="getService().selectEmployee.office" placeholder="Название обьекта">
+  </div>
+  <div class="form-group">
+    <label>Домашний адрес</label>
+    <input class="form-control" name="adress" #adress="ngModel" [(ngModel)]="getService().selectEmployee.adress" placeholder="Домашний адрес">
+  </div>
+  <div class="form-group">
+    <label>Образование</label>
+    <input class="form-control" name="education" #education="ngModel" [(ngModel)]="getService().selectEmployee.education" placeholder="Образование">
+  </div>
+  <div class="form-group">
+    <label>Семейное положение</label>
+    <input class="form-control" name="familyState" #familyState="ngModel" [(ngModel)]="getService().selectEmployee.familyState" placeholder="Семейное положение">
+  </div>
+  <div class="form-group">
+    <label>Контактный телефон</label>
+    <div class="input-group">
+      <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone-square"></i></span>
+      </div>
+      <input class="form-control" name="salary" #salary="ngModel" [(ngModel)]="getService().selectEmployee.salary" placeholder="Введите номер телефона">
+    </div>
+
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default" type="submit" (click)="onSubmit(employeeForm)"  [disabled]="!employeeForm.valid" >
+      <i class="fas fa-save"></i>
+      Submit</button>
+    <button class="btn btn-default" type="button" (click)="resetForm(employeeForm)">
+      <i class="fas fa-redo"></i>
+      Reset</button>
+  </div>
+</form>

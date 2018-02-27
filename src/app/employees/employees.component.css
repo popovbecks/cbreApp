@@ -1,0 +1,16 @@
+.image_world img{
+  width: 550px;
+  height: auto;
+}
+.image_world{
+  padding-top: 50px;
+  margin-left: -65px;
+}
+.addUser{
+  text-decoration: underline;
+  color: forestgreen;
+}
+.addUser:hover{
+  color: red;
+  cursor: pointer;
+}

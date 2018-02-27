@@ -1,0 +1,23 @@
+<div class="text-center">
+  <a routerLink="/calculator" class="routerButton">Salary Calculator</a>
+  <div class="logo">
+    <img src="https://popovbecks.github.io/Angular5CRUDproject/assets/logo.png" alt="">
+  </div>
+  <h2 class="jumbotron"></h2>
+</div>
+<div class="row">
+  <div class="col-md-7">
+    <div *ngIf="isAddUser">
+      <div class="addUser">
+        <a class="addUser" (click)="addUser()" ><i class="fas fa-plus-square"></i> Добавить нового работника</a>
+      </div>
+      <div class="image_world">
+        <img src="https://popovbecks.github.io/Angular5CRUDproject/assets/global.jpg" alt="">
+      </div>
+    </div>
+    <app-employee *ngIf="isVisible" (isEmployeeFormChange)="onNameChange($event)" ></app-employee>
+  </div>
+  <div class="col-md-5">
+    <app-employee-list (isEmployeeListFormChange)="onNameChange($event)"  ></app-employee-list>
+  </div>
+</div>
