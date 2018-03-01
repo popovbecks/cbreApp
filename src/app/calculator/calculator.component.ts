@@ -29,7 +29,7 @@ sumWithTax: number;
       this.allSalary = this.hours * this.salaryByHour;
       this.bonus = this.allSalary * 0.05;
       this.salaryByNights = this.nights * 0.2 * this.salaryByHour;
-      this.salaryByFood = this.workDays * 55;
+      this.salaryByFood = this.hours * 5;
       this.salaryByHolidays = this.holidaysDays * this.salaryByHour;
       this.sum = this.allSalary + this.bonus + this.salaryByNights + this.salaryByFood + this.salaryByHolidays;
       this.sumWithTax = this.sum * 0.805;
